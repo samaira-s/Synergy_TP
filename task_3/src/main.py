@@ -30,20 +30,16 @@ def main():
 
     file_path = sys.argv[1]
 
-    # Manual parser
     rows = read_csv_manual(file_path)
     rows = convert_types(rows)
     manual_summary = calculate_summary(rows)
     write_json(manual_summary, "task_3/output/manual_summary.json")
     print("Manual summary written.")
 
-    # Pandas parser
     df = read_csv_pandas(file_path)
     pandas_summary = calculate_summary_pandas(df)
     write_json(pandas_summary, "task_3/output/pandas_summary.json")
     print("Pandas summary written.")
-
-    # Comparison report
     write_comparison_report(manual_summary, pandas_summary, "task_3/output/comparison_report.md")
     print("Comparison report written.")
 
