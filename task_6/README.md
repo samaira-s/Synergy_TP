@@ -4,17 +4,19 @@
 A written report covering the theoretical concepts and design decisions behind Tasks 1 to 5 of the Software/ML Domain Taskphase.
 
 ## Folder Structure
+```
 task_6/
-report/
-    Software_ML_Taskphase_Report.docx
-    Software_ML_Taskphase_Report.pdf
-assets/
-    attendance_vs_score.png
-    domain_average_score.png
-    submission_status_count.png
-    table1.jpg
-    workflow.jpg
-README.md
+    report/
+        Software_ML_Taskphase_Report.docx
+        Software_ML_Taskphase_Report.pdf
+    assets/
+        attendance_vs_score.png
+        domain_average_score.png
+        submission_status_count.png
+        table1.jpg
+        workflow.jpg
+    README.md
+```
 
 ## Contents
 - `report/Software_ML_Taskphase_Report.docx` — Full report in Word format
