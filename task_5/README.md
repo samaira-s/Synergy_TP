@@ -4,6 +4,7 @@
 Generate three properly labeled plots from the cleaned dataset produced in Task 4.
 
 ## Folder Structure
+```
 Synergy_TP/
   task_5/
     README.md
@@ -15,6 +16,8 @@ Synergy_TP/
     src/
       visualize.py
       main.py
+```
+
 ## Required Packages
 pandas,matplotlib
 ## Setup Instructions

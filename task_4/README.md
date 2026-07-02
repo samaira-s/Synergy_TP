@@ -4,6 +4,7 @@
 Clean a messy CSV dataset using pandas and produce a clean dataset, validation checks, and a written cleaning report.
 
 ## Folder Structure
+```
 Synergy_TP/
   task_4/
     README.md
@@ -18,20 +19,7 @@ Synergy_TP/
       clean_data.py
       validate_data.py
       main.py
-Synergy_TP/
-  task_4/
-    README.md
-    data/
-      messy_students.csv
-    output/
-      cleaned_students.csv
-      cleaning_report.md
-      summary_before.json
-      summary_after.json
-    src/
-      clean_data.py
-      validate_data.py
-      main.py
+```
 ## Required Packages
 pandas
 ## Setup Instructions

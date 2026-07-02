@@ -4,6 +4,7 @@
 Build a CSV parser manually using Python file I/O, then repeat the same analysis using pandas to understand how raw CSV text becomes structured Python data.
 
 ## Folder Structure
+```
 Synergy_TP/
   task_3/
     README.md
@@ -17,19 +18,7 @@ Synergy_TP/
       manual_parser.py
       pandas_parser.py
       main.py
-Synergy_TP/
-  task_3/
-    README.md
-    data/
-      submissions.csv
-    output/
-      manual_summary.json
-      pandas_summary.json
-      comparison_report.md
-    src/
-      manual_parser.py
-      pandas_parser.py
-      main.py
+```      
 ## Setup Instructions
 ```bash
 source venv/Scripts/activate
