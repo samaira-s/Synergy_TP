@@ -1,0 +1,28 @@
+{
+  "classification_threshold": 1.8,
+  "model_accuracy": 0.9083484573502723,
+  "model_precision": 0.8688845401174168,
+  "model_recall": 0.9288702928870293,
+  "model_f1": 0.8978766430738119,
+  "baseline_accuracy": 0.5662431941923775,
+  "baseline_precision": 0.0,
+  "baseline_recall": 0.0,
+  "baseline_f1": 0.0,
+  "confusion_matrix": {
+    "true_positive": 444,
+    "true_negative": 557,
+    "false_positive": 67,
+    "false_negative": 34
+  },
+  "weights": {
+    "PT08.S1(CO)": 1.7876345496221098,
+    "PT08.S2(NMHC)": 4.444450177008558,
+    "PT08.S3(NOx)": -0.8058109798940071,
+    "PT08.S4(NO2)": 0.008509195148341572,
+    "PT08.S5(O3)": -0.024034616516039737,
+    "T": -0.30453771445402517,
+    "RH": 0.1177419166651222,
+    "AH": -0.865598864289624
+  },
+  "bias": 0.49319345261302383
+}
