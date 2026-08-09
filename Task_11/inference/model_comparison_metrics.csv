@@ -1,0 +1,6 @@
+Model,Accuracy,F1 (macro)
+Dummy Baseline,0.0455,0.004
+Logistic Regression,0.9667,0.9665
+KNN,0.9848,0.9848
+Decision Tree,0.9758,0.9754
+Random Forest,0.9909,0.9909
