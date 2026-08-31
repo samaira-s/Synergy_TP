@@ -1,0 +1,4 @@
+split,accuracy,f1
+Random (naive),0.9908,0.9801
+Realistic - future days (test2),0.9728,0.938
+Realistic - condition shift (test1),0.9493,0.9294
