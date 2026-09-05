@@ -1,0 +1,10 @@
+{
+  "device_id": "soil-sensor-01",
+  "session_id": "session-2026-09-05-a",
+  "timestamp": "2026-09-05T14:32:10Z",
+  "readings": {
+    "soil_moisture_pct": 42.5,
+    "soil_temperature_c": 24.1
+  },
+  "status": "ok"
+}
