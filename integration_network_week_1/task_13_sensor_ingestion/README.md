@@ -55,3 +55,12 @@ laptop — use the IPv4 address, not `localhost`.
 - Unknown device_id returns HTTP 404, not a crash
 - Simulator handles backend-down (connection refused) gracefully — logs and
   continues to the next reading instead of crashing
+## Known Issue: Cross-Device Connectivity
+Attempted cross-device test between two laptops on the same campus Wi-Fi.
+A basic `ping` between them failed completely (100% packet loss) despite
+both sharing an identical Default Gateway (same subnet). Likely cause:
+client isolation (AP isolation), a common institutional Wi-Fi setting that
+blocks direct device-to-device traffic while still allowing internet access.
+Workaround attempted: switching both devices to a personal mobile hotspot.
+See the full report for the detailed diagnosis.
+

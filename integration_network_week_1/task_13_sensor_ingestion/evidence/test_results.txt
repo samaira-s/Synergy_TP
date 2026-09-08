@@ -1,0 +1,33 @@
+=== Test 1: Health check ===
+StatusCode: 200
+Content: {"status":"ok","time":"2026-09-05T18:55:58.814861+00:00"}
+
+=== Test 2: Simulator - single device, 8 readings, 1 deliberately invalid ===
+[1/8] Sent moisture=42.9% temp=27.4C -> HTTP 200: {'message': 'Reading accepted', 'stored_count': 1}
+[2/8] Sent moisture=27.0% temp=22.5C -> HTTP 200: {'message': 'Reading accepted', 'stored_count': 2}
+[3/8] Sent moisture=59.6% temp=29.9C -> HTTP 200: {'message': 'Reading accepted', 'stored_count': 3}
+[4/8] Sent moisture=250.0% temp=18.8C -> HTTP 422: {'detail': {'errors': ['soil_moisture_pct=250.0 is outside plausible range [0.0, 100.0]']}}
+[5/8] Sent moisture=30.5% temp=22.0C -> HTTP 200: {'message': 'Reading accepted', 'stored_count': 4}
+[6/8] Sent moisture=57.2% temp=21.2C -> HTTP 200: {'message': 'Reading accepted', 'stored_count': 5}
+[7/8] Sent moisture=45.2% temp=24.5C -> HTTP 200: {'message': 'Reading accepted', 'stored_count': 6}
+[8/8] Sent moisture=24.1% temp=25.0C -> HTTP 200: {'message': 'Reading accepted', 'stored_count': 7}
+
+=== Test 3: Second device ===
+[1/3] Sent moisture=48.6% temp=29.7C -> HTTP 200: {'message': 'Reading accepted', 'stored_count': 8}
+[2/3] Sent moisture=51.7% temp=21.8C -> HTTP 200: {'message': 'Reading accepted', 'stored_count': 9}
+[3/3] Sent moisture=47.1% temp=22.3C -> HTTP 200: {'message': 'Reading accepted', 'stored_count': 10}
+
+=== Test 4: Missing field ===
+422
+{'detail': [{'type': 'missing', 'loc': ['body', 'session_id'], 'msg': 'Field required', ...}]}
+
+=== Test 5: Backend down ===
+[1/3] Could not reach backend at http://127.0.0.1:8000 (connection refused). Skipping this reading and continuing.
+[2/3] Could not reach backend at http://127.0.0.1:8000 (connection refused). Skipping this reading and continuing.
+[3/3] Could not reach backend at http://127.0.0.1:8000 (connection refused). Skipping this reading and continuing.
+Simulator finished.
+
+=== Test 6: Cross-device ping (failed, diagnosed as client isolation) ===
+Pinging 10.69.1.170 with 32 bytes of data:
+Request timed out. (x4)
+Packets: Sent = 4, Received = 0, Lost = 4 (100% loss)
